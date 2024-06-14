@@ -1,7 +1,7 @@
 # 3rd ( https://1drv.ms/w/s!Aq6OtsQMysHpiw5yA5U98qm8co0r?e=efIPdI )  
 
-6th exp
-    set ns [new Simulator]  
+6th exp  
+      set ns [new Simulator]  
     set nf [open udp.nam w]  
     $ns namtrace-all $nf  
     set tf [open mo.tr w]  
