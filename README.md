@@ -2,21 +2,21 @@
 
 6th exp  
       set ns [new Simulator]  
-    set nf [open udp.nam w]  
-    $ns namtrace-all $nf  
-    set tf [open mo.tr w]  
-    $ns trace-all $tf  
-    proc finish { } {  
-    global ns nf tf  
-    $ns flush-trace  
-    close $nf  
-    close $tf  
-    exec nam udp.nam &  
-    exit 0 }  
-    set n0 [$ns node]  
-    set n1 [$ns node]  
-    set n2 [$ns node]  
-    set n3 [$ns node]  
+      set nf [open udp.nam w]  
+      $ns namtrace-all $nf  
+      set tf [open mo.tr w]  
+      $ns trace-all $tf  
+      proc finish { } {  
+      global ns nf tf  
+      $ns flush-trace  
+      close $nf  
+      close $tf  
+      exec nam udp.nam &  
+      exit 0 }  
+      set n0 [$ns node]  
+      set n1 [$ns node]  
+      set n2 [$ns node]  
+      set n3 [$ns node]  
 $n3 label “destination”  
 $ns duplex-link $n0 $n2 10Mb 1ms DropTail  
 $ns duplex-link $n1 $n2 10Mb 1ms DropTail  
